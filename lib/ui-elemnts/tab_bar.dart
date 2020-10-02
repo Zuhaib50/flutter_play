@@ -3,7 +3,7 @@ import '../models/page.dart';
 
 class TabBarWidget extends StatelessWidget {
   final TabController _controller;
-  final List<Page> _allPages;
+  final List<Pages> _allPages;
   TabBarWidget(this._controller, this._allPages);
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class TabBarWidget extends StatelessWidget {
         indicatorColor: Colors.white,
         labelColor: Colors.green,
         unselectedLabelColor: Colors.grey,
-        tabs: _allPages.map((Page page) {
+        tabs: _allPages.map((Pages page) {
           return Tab(
             text: page.text,
             icon: new Icon(page.icon, size: 18.0),

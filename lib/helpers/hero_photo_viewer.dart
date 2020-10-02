@@ -40,10 +40,10 @@ class HeroPhotoViewWrapper extends StatelessWidget {
         child: new PhotoView(
           imageProvider: imageProvider,
           loadingChild: loadingChild,
-          backgroundColor: Colors.black,
+          //  backgroundColor: Colors.black,
           minScale: minScale,
           maxScale: maxScale,
-          heroTag: heroTag,
+          //  heroTag: heroTag,
         ),
       ),
     );

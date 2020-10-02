@@ -2,17 +2,18 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_play/models/page.dart';
 import '../ui-elemnts/tab_bar.dart';
 import '../pages/home/sub_tab_home.dart';
-import '../models/page.dart';
 
-List<Page> _allPages = <Page>[
-  Page(icon: Icons.explore, text: 'For You', category: 'category-name'),
-  Page(icon: Icons.insert_chart, text: 'Top Charts', category: 'category-name'),
-  Page(icon: Icons.category, text: 'Categories', category: 'category-name'),
-  Page(icon: Icons.stars, text: 'Editor\'s Choice', category: 'category-name'),
-  Page(icon: Icons.wb_sunny, text: 'Family', category: 'category-name'),
-  Page(
+List<Pages> _allPages = <Pages>[
+  Pages(icon: Icons.explore, text: 'For You', category: 'category-name'),
+  Pages(
+      icon: Icons.insert_chart, text: 'Top Charts', category: 'category-name'),
+  Pages(icon: Icons.category, text: 'Categories', category: 'category-name'),
+  Pages(icon: Icons.stars, text: 'Editor\'s Choice', category: 'category-name'),
+  Pages(icon: Icons.wb_sunny, text: 'Family', category: 'category-name'),
+  Pages(
       icon: Icons.directions_bus,
       text: 'Early Access',
       category: 'category-name'),
@@ -63,7 +64,7 @@ class _GameTabState extends State<GameTab> with SingleTickerProviderStateMixin {
 
   Widget build(BuildContext context) {
     final List<Widget> tabChildernPages = <Widget>[];
-    _allPages.forEach((Page page) => tabChildernPages.add(HomeSubTab()));
+    _allPages.forEach((Pages page) => tabChildernPages.add(HomeSubTab()));
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
